@@ -1,0 +1,22 @@
+# Local Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local OS metadata
+.DS_Store
+
+# Runtime logs and session output
+app.log
+lastlog
+logs/
+recordings/
+exports/
+screenshots/
+
+# Platform-specific compiled SDK wrapper
+lidar/sdk_wrapper_lib.so
+lidar/sdk_wrapper.so

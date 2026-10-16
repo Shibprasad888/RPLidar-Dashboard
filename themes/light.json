@@ -1,0 +1,13 @@
+{
+  "name": "light",
+  "accent": "#1976D2",
+  "palette": {
+    "background": "#F4F7FA",
+    "panel": "#FFFFFF",
+    "text": "#111827",
+    "muted": "#6B7280",
+    "warn": "#F59E0B",
+    "error": "#EF4444",
+    "success": "#10B981"
+  }
+}

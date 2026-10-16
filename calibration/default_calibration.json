@@ -1,0 +1,23 @@
+{
+  "intrinsics": {
+    "fx": 1000.0,
+    "fy": 1000.0,
+    "cx": 640.0,
+    "cy": 360.0,
+    "distortion": [0.0, 0.0, 0.0, 0.0, 0.0]
+  },
+  "extrinsics": {
+    "tx_mm": 0.0,
+    "ty_mm": 0.0,
+    "tz_mm": 0.0,
+    "roll_deg": 0.0,
+    "pitch_deg": 0.0,
+    "yaw_deg": 0.0
+  },
+  "lidar_offset_mm": [0.0, 0.0, 0.0],
+  "camera_offset_mm": [0.0, 0.0, 0.0],
+  "fov_deg": 90.0,
+  "yaw_offset_deg": 0.0,
+  "pitch_offset_deg": 0.0,
+  "roll_offset_deg": 0.0
+}

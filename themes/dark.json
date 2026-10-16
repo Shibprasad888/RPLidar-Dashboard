@@ -1,0 +1,13 @@
+{
+  "name": "dark",
+  "accent": "#44C3FF",
+  "palette": {
+    "background": "#0A0C10",
+    "panel": "#141824",
+    "text": "#F6F8FA",
+    "muted": "#7E8BA9",
+    "warn": "#FFA95B",
+    "error": "#FF5E7A",
+    "success": "#6CEAC7"
+  }
+}

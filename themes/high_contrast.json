@@ -1,0 +1,13 @@
+{
+  "name": "high_contrast",
+  "accent": "#FFFF00",
+  "palette": {
+    "background": "#000000",
+    "panel": "#111111",
+    "text": "#FFFFFF",
+    "muted": "#CCCCCC",
+    "warn": "#FF00FF",
+    "error": "#FF0000",
+    "success": "#00FF00"
+  }
+}

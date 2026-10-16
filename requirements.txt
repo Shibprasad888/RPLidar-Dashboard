@@ -1,0 +1,6 @@
+pyserial>=3.5
+numpy>=1.26.0
+pygame>=2.6.0
+scikit-learn>=1.4.0
+opencv-python>=4.8.0
+ultralytics>=8.0.0

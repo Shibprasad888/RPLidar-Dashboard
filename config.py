@@ -1,0 +1,153 @@
+import os
+from typing import Optional
+
+SERIAL_PORT: Optional[str] = os.getenv("RP_LIDAR_SERIAL_PORT")
+BAUD_RATE: int = 460800
+SCAN_MODE: str = "standard"
+DEBUG: bool = False
+CONNECTION_TIMEOUT: float = 5.0
+LIDAR_RECONNECT_INTERVAL_S: float = 2.0
+WINDOW_WIDTH: int = 1400
+WINDOW_HEIGHT: int = 900
+MAX_SCAN_DISTANCE_MM: int = 10000
+INITIAL_ZOOM: float = 1.0
+SCAN_DOWNSAMPLE_RATE: int = 4
+MAX_POINT_QUEUE_SIZE: int = 1000
+ENABLE_SAMPLE_PRINT: bool = False
+ENABLE_TERMINAL_OBJECT_SUMMARY: bool = True
+OBJECT_SUMMARY_PRINT_INTERVAL_S: float = 1.0
+
+MIN_DETECTION_DISTANCE_MM: int = 200
+MAX_DETECTION_DISTANCE_MM: int = 10000
+MIN_CLUSTER_SIZE: int = 3
+MAX_CLUSTER_SIZE: int = 400
+DBSCAN_EPS_MM: float = 180.0
+DBSCAN_MIN_SAMPLES: int = 3
+
+TRACKING_DISTANCE_THRESHOLD_MM: float = 450.0
+MAX_LOST_FRAMES: int = 10
+TRAIL_LENGTH: int = 8
+VELOCITY_SMOOTHING_FACTOR: float = 0.25
+PREDICTION_ENABLE: bool = True
+MIN_CONFIDENCE: float = 0.3
+MAX_ASSOCIATION_DISTANCE_MM: float = 650.0
+ENABLE_MOTION_TRAILS: bool = True
+ENABLE_VELOCITY_ARROWS: bool = True
+ENABLE_PREDICTION: bool = True
+ENABLE_DEBUG_TRACKING: bool = False
+ENABLE_DEBUG_LABELS: bool = True
+ENABLE_LABELS: bool = True
+ENABLE_BOUNDING_CIRCLES: bool = True
+ENABLE_CONNECTION_LINES: bool = True
+ENABLE_STATISTICS: bool = True
+
+# Phase 5 - motion and safety analysis
+CRITICAL_ZONE_RADIUS_MM: int = 1000
+WARNING_ZONE_RADIUS_MM: int = 2500
+AWARENESS_ZONE_RADIUS_MM: int = 5000
+SAFE_ZONE_RADIUS_MM: int = 10000
+ENABLE_COLLISION_PREDICTION: bool = True
+ENABLE_SAFETY_ZONES: bool = True
+ENABLE_PREDICTION_PATHS: bool = True
+PREDICTION_TIME_HORIZON: float = 2.0
+VELOCITY_SMOOTHING: float = 0.25
+ACCELERATION_SMOOTHING: float = 0.2
+ALERT_TIMEOUT: float = 2.0
+RISK_THRESHOLDS: dict[str, float] = {
+    "safe": 0.15,
+    "low": 0.3,
+    "medium": 0.6,
+    "high": 0.85,
+}
+DEBUG_MOTION: bool = False
+
+# Phase 6 - occupancy grid mapping
+MAP_WIDTH_MM: int = 20000
+MAP_HEIGHT_MM: int = 20000
+GRID_RESOLUTION_MM: float = 200.0
+OCCUPIED_THRESHOLD: float = 0.7
+FREE_THRESHOLD: float = 0.3
+MAX_PROBABILITY: float = 0.99
+MIN_PROBABILITY: float = 0.01
+OCCUPIED_UPDATE_RATE: float = 0.25
+FREE_UPDATE_RATE: float = 0.25
+CELL_DECAY_RATE: float = 0.01
+ENABLE_DYNAMIC_CELL_DECAY: bool = True
+ENABLE_MAP_EXPORT: bool = True
+
+# Phase 7 - SLAM
+ENABLE_SLAM: bool = True
+ENABLE_LOCALIZATION: bool = True
+ENABLE_SCAN_MATCHING: bool = True
+ENABLE_POSE_HISTORY: bool = True
+MAX_POSE_HISTORY: int = 500
+MAX_KEYFRAMES: int = 100
+LOCALIZATION_SMOOTHING: float = 0.65
+SCAN_MATCH_THRESHOLD: float = 0.2
+MIN_SCAN_OVERLAP: float = 0.15
+MAX_POSE_ERROR: float = 1200.0
+TRAJECTORY_LENGTH: int = 250
+ENABLE_TRAJECTORY: bool = True
+ENABLE_LOOP_CLOSURE_PREPARATION: bool = True
+
+# Phase 8 - camera + AI fusion
+ENABLE_CAMERA: bool = False
+CAMERA_SOURCE: str = "0"
+CAMERA_WIDTH: int = 1280
+CAMERA_HEIGHT: int = 720
+CAMERA_FPS: int = 30
+YOLO_MODEL_PATH: str = "yolov8n.pt"
+DETECTION_CONFIDENCE: float = 0.35
+FUSION_DISTANCE_THRESHOLD_MM: float = 800.0
+FUSION_ANGLE_THRESHOLD_DEG: float = 30.0
+CALIBRATION_FILE: str = "calibration/default_calibration.json"
+ENABLE_AI_DETECTION: bool = False
+ENABLE_SENSOR_FUSION: bool = False
+ENABLE_RECORDING: bool = False
+ENABLE_CAMERA_OVERLAY: bool = False
+# Visual simplification: show raw LiDAR points in the radar view
+SHOW_RAW_POINTS: bool = False
+RECORDING_DIRECTORY: str = "recordings"
+DEBUG_CAMERA: bool = False
+DEBUG_FUSION: bool = False
+DEBUG_CAMERA_OVERLAY: bool = False
+
+# Phase 9 - autonomous navigation
+ENABLE_NAVIGATION: bool = True
+ENABLE_NAVIGATION_SIMULATION: bool = True
+ENABLE_DYNAMIC_REPLANNING: bool = True
+ENABLE_OBSTACLE_INFLATION: bool = True
+PLANNER_TYPE: str = "A_STAR"
+GRID_INFLATION_RADIUS_MM: int = 900
+ROBOT_RADIUS_MM: int = 450
+MAX_SPEED_M_S: float = 0.8
+MAX_TURN_RATE_DEG_S: float = 60.0
+GOAL_TOLERANCE_MM: float = 300.0
+REPLAN_INTERVAL_S: float = 1.2
+UNKNOWN_CELL_COST: float = 4.0
+PATH_SMOOTHING: bool = True
+SIMULATION_SPEED: float = 1.0
+DEBUG_NAVIGATION: bool = False
+
+# Phase 10 - production platform and application management
+CONFIG_DIRECTORY: str = "configs"
+LOG_DIRECTORY: str = "logs"
+EXPORT_DIRECTORY: str = "exports"
+SCREENSHOT_DIRECTORY: str = "screenshots"
+PLUGIN_DIRECTORY: str = "plugins"
+THEME_DIRECTORY: str = "themes"
+DEFAULT_THEME: str = "dark"
+PERFORMANCE_MONITOR_INTERVAL_S: float = 0.5
+SESSION_PROFILE_FILE: str = "default_profile.json"
+RECORDING_METADATA_FILENAME: str = "session_metadata.json"
+PLAYBACK_METADATA_FILENAME: str = "session_playback.json"
+
+# runtime capabilities
+ENABLE_AUTO_RECOVERY: bool = True
+ENABLE_DIAGNOSTICS_OVERLAY: bool = True
+ENABLE_PERFORMANCE_MONITORING: bool = True
+ENABLE_THEME_SWITCHING: bool = True
+ENABLE_PLUGIN_SUPPORT: bool = True
+ENABLE_PLAYBACK: bool = True
+ENABLE_SCREENSHOT_CAPTURE: bool = True
+ENABLE_EXPORTS: bool = True
