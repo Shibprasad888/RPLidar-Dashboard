@@ -6,7 +6,7 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Local OS metadata
+# Local OS metadata~
 .DS_Store
 
 # Runtime logs and session output
